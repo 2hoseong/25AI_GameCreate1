@@ -5,14 +5,16 @@ TagManager:
   serializedVersion: 3
   tags:
   - SpikeDestroyer
+  - Floor
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
-  - 
+  - groundLayer
   - 
   - 
   - 

@@ -14,11 +14,11 @@ public class SpikeAction : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("¹Ú¾Ò¾î!!!");
 
         if (collision.gameObject.CompareTag("SpikeDestroyer"))
         {
             Destroy(gameObject);
+            Debug.Log("Spike : ¼Ò¸ê");
         }   
     }
 }
