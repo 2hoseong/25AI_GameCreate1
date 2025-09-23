@@ -1,24 +1,12 @@
 using UnityEngine;
 
-public class SpikeAction : MonoBehaviour
+public class L4_1SpikeAction : MonoBehaviour
 {
     float speed = 5;
     void Start()
     {
         Application.targetFrameRate = 100;
 
-        // 일정 확률로 투명하게 만들기 (예: 30% 확률)
-        float random = Random.value; // 0.0 ~ 1.0 사이 랜덤 값
-        if (random < 0.3f)
-        {
-            SpriteRenderer sr = GetComponent<SpriteRenderer>();
-            if (sr != null)
-            {
-                Color c = sr.color;
-                c.a = 0f;       // 알파값을 0으로 → 완전 투명
-                sr.color = c;
-            }
-        }
     }
 
     void Update()

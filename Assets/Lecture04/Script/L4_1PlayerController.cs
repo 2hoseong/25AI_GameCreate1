@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class L4_1PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     bool isJumping = true;
@@ -12,9 +12,12 @@ public class PlayerController : MonoBehaviour
 
     public GameObject text;
 
+    Animator animator;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         isJumping = true;
         Debug.Log("Player : isJumping = true");
         text.SetActive(false);
@@ -56,6 +59,7 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame && !isJumping)
         {
             Debug.Log("Player : มกวม(Space Bar Pressed)");
+            animator.Play("PlayerJump", -1, 0f);
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpPower);
             isJumping = true;
         }
